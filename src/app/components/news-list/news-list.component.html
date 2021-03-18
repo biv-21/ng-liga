@@ -1,6 +1,0 @@
-<div *ngFor="let newsKV of newsMap | keyvalue: compareFnKV;">
-  <h2 style="margin: 0 1em;">{{newsKV.key | date: 'dd.MM'}}</h2>
-  <mat-card *ngFor="let newsItem of newsKV.value" (click)="newsItemClick(newsItem)">
-    <app-news-item [newsItem]="newsItem"></app-news-item>
-  </mat-card>
-</div>
