@@ -1,0 +1,11 @@
+<h3 mat-dialog-title>Add news</h3>
+<div mat-dialog-content>
+  <mat-form-field #titleFormField>
+    <mat-label>Title</mat-label>
+    <input matInput [formControl]="title">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button (click)="cancelClick()">Cancel</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="title.value" [disabled]="!title.valid">Add</button>
+</div>

@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-content>
+    <div *ngIf="selectedNews.selected[0]">
+      <div class="placeholder">
+        <h1>{{selectedNews.selected[0].ID}}</h1>
+        <div class="carousel-control">
+          <button mat-mini-fab color="primary" (click)="prevClick()">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <button mat-mini-fab color="primary" (click)="nextClick()">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+      <app-news-item [newsItem]="selectedNews.selected[0]" [fullDate]="true"></app-news-item>
+    </div>
+  </mat-card-content>
+</mat-card>

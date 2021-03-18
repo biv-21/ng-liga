@@ -1,0 +1,4 @@
+<div *ngIf="newsItem">
+  <h2>{{newsItem.title}}</h2>
+  <p class="subtitle">{{newsItem.date | date: dateFormat()}} <mat-icon>visibility</mat-icon>{{newsItem.viewCount}}</p>
+</div>
