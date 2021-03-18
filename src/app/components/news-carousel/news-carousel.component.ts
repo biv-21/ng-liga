@@ -21,6 +21,10 @@ export class NewsCarouselComponent implements OnChanges {
     if (this.selectedNews.selected.length === 0) {
       this._news = [...this.news];
       this.selectedNews.select(this._news[0]);
+
+      setInterval(() => {
+        this.nextClick();
+      }, 5000);
     }
   }
 
